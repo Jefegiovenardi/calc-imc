@@ -21,7 +21,7 @@ class CalcIMC:  # Cálculo do Índice de Massa Corporal
         self.altura = input("Digite sua altura em metros: ")
         self.altura_ajustada = self.altura.replace(',', '.')  # Adequando caso o usuário tenha usado ','
         formato = re.compile(
-            r'^[1-9]+\.[0-9]*$')  # Definindo o formato no qual a altura deve ser inserida
+            r'^[0-9]+\.[0-9]*$')  # Definindo o formato no qual a altura deve ser inserida
         padrao = re.match(formato, self.altura_ajustada)  # Validando se a altura cumpre os requisitos definidos
         if padrao:
             print("Altura Válida!")
